@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const ctrl = require("./controller.js")
 
 const app = express();
 
@@ -50,6 +51,8 @@ app.get("/api/motivation", (req, res) => {
   
 });
 
+app.get('/api/cars', ctrl.getAllCars)
+app.post('/api/cars', ctrl.createCar)
 
 
 app.listen(4000, () => console.log("Server running on 4000"));

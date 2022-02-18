@@ -22,4 +22,3 @@ document.getElementById("motivationButton").onclick = function () {
             alert(data);
         });
 };
-
